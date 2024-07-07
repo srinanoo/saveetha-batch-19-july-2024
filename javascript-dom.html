@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <form>
+        <input type="text" id="txtUsername" class="" name="">
+        <br>
+        <input type="checkbox" name="chkSubjects" value="HTML"> HTML<br>
+        <input type="checkbox" name="chkSubjects" value="CSS"> CSS<br>
+        <input type="checkbox" name="chkSubjects" value="JavaScript"> JavaScript<br>
+        <br>
+        <input type="button" onclick="testFunc();" value="Click">
+    </form>
+
+    <input type="text" id="txtOutput"> -->
+
+    <!-- <div id="div1">
+        This is a <strong>test</strong> message...
+    </div>
+
+    <button onclick="getData();">Click</button>
+
+    <div id="divOutput1"></div>
+    <div id="divOutput2"></div> -->
+
+    Rows: <input type="number" id="rows"><br>
+    Columns: <input type="number" id="cols"><br>
+    <button onclick="generateTable();">Generate Table</button>
+
+    <div id="result"></div>
+
+    
+    <script>
+        function generateTable() {
+            // let rows = parseInt(document.getElementById("rows").value);
+            // let cols = parseInt(document.getElementById("cols").value);
+
+            let rows = parseInt(prompt("Enter no. of Rows"));
+            let cols = parseInt(prompt("Enter no. of Cols"));
+            let output = '<table border="1">';
+            for(let i = 0; i < rows; i++) {
+                output += '<tr>';
+                for(let j = 0; j < cols; j++) {
+                    output += '<td>'+cols+'</td>';
+                }
+                output += '</tr>';
+            }
+            output += '</table>';
+
+            console.log(output);
+            document.getElementById("result").innerHTML = output;
+        }
+
+
+        function getData() {
+            let div1 = document.getElementById("div1").innerText;
+            console.log(div1);
+
+            let div2 = document.getElementById("div1").innerHTML;
+            console.log(div2);
+
+            document.getElementById("divOutput1").innerHTML = div2;
+        }
+
+        function testFunc() {
+            console.log("Button is clicked");
+            let username = document.getElementById("txtUsername").value;
+            console.log(username);
+
+            document.getElementById("txtOutput").value = username;
+
+            let subjects = document.getElementsByName("chkSubjects");
+            for(let i = 0; i < subjects.length; i++) {
+                if(subjects[i].checked)
+                    console.log(subjects[i].value);
+            }
+        }
+    </script>
+    
+</body>
+</html>

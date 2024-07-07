@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+        }
+        div {
+            border: solid;
+        }
+        .row1, .row2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .row1 > div {
+            width: 16.6666666%;
+        }
+        .row2 > div {
+            width: 50%;
+        }
+
+        @media only screen and (max-width: 475px) {
+            .row1 > div {
+                width: 33.3333333%;
+            }
+            .row2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row1">
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row2">
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+        <div>
+            <img src="images/background.jpeg" alt=""><br>
+            <p>Paragraph 1</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <img src="images/background.jpeg" alt=""><br>
+        <p>Paragraph 1</p>
+    </div>
+    
+</body>
+</html>
